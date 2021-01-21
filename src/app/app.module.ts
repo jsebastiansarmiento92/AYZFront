@@ -12,6 +12,10 @@ import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import { AbogadoComponent } from './componentes/abogado/abogado.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AreaPracticaComponent } from './componentes/area-practica/area-practica.component';
+import { AreaPractica4Component } from './componentes/area-practica4/area-practica4/area-practica4.component';
+import { AreaPractica5Component } from './componentes/area-practica5/area-practica5/area-practica5.component';
+import { AreaPractica6Component } from './componentes/area-practica6/area-practica6/area-practica6.component';
+import { TecnicosComponent } from './componentes/tecnicos/tecnicos/tecnicos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { AreaPracticaComponent } from './componentes/area-practica/area-practica
     NotFoundComponent,
     AbogadoComponent,
     ContactoComponent,
-    AreaPracticaComponent
+    AreaPracticaComponent,
+    AreaPractica4Component,
+    AreaPractica5Component,
+    AreaPractica6Component,
+    TecnicosComponent
   ],
   imports: [
     BrowserModule,
