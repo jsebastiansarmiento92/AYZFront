@@ -12,6 +12,8 @@ import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import { AbogadoComponent } from './componentes/abogado/abogado.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AreaPracticaComponent } from './componentes/area-practica/area-practica.component';
+import { AreaPractica2Component } from './componentes/area-practica2/area-practica2.component';
+import { AreaPractica3Component } from './componentes/area-practica3/area-practica3.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AreaPracticaComponent } from './componentes/area-practica/area-practica
     NotFoundComponent,
     AbogadoComponent,
     ContactoComponent,
-    AreaPracticaComponent
+    AreaPracticaComponent,
+    AreaPractica2Component,
+    AreaPractica3Component
   ],
   imports: [
     BrowserModule,
