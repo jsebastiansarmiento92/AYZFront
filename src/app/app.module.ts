@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,7 +13,9 @@ import { NotFoundComponent } from './componentes/not-found/not-found.component';
 import { AbogadoComponent } from './componentes/abogado/abogado.component';
 import { ContactoComponent } from './componentes/contacto/contacto.component';
 import { AreaPracticaComponent } from './componentes/area-practica/area-practica.component';
-
+import { AreasPracticaService } from './services/areas-practica.service'
+import { from } from 'rxjs';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +31,12 @@ import { AreaPracticaComponent } from './componentes/area-practica/area-practica
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AreasPracticaService
+  ],
   bootstrap: [AppComponent]
-})
+}) 
 export class AppModule { }

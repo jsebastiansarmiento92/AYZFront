@@ -1,0 +1,1 @@
+export let dominioAreasPracticas = 'http://localhost:3000/api/public/areasPracticas';
