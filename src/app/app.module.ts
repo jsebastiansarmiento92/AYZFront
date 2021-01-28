@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { TecnicosComponent } from './componentes/tecnicos/tecnicos/tecnicos.comp
 import { FooterNocheComponent } from './componentes/footerNoche/footer-noche/footer-noche.component';
 import { HeadNocheComponent } from './componentes/headNoche/head-noche/head-noche.component';
 
+import { AreasPracticaService } from './services/areas-practica.service'
+import { from } from 'rxjs';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,9 +38,12 @@ import { HeadNocheComponent } from './componentes/headNoche/head-noche/head-noch
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AreasPracticaService
+  ],
   bootstrap: [AppComponent]
-})
+}) 
 export class AppModule { }

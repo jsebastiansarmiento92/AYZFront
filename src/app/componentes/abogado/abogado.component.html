@@ -4,10 +4,10 @@
         <div class="row">
             <div class="col-md-5 ml-auto">
                 <div class="card card-background"
-                    style="background-image:url('./assets/img/abogadoPrueba.jpg'); height: 450px; width: 100%;">
+                    style="background-image:url('{{grupoSeleccionado.imagen}}'); height: 450px; width: 100%;">
                     
                     <div class="card-body mr-0  text-right" style="padding-top: 118px;">
-                        <h3 class="card-title text-right"  style="padding-top: 256px;" >Brayan Snader Sierra Riveros</h3>
+                        <h3 class="card-title text-right"  style="padding-top: 232px;" >{{grupoSeleccionado.nombre_area}}</h3>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <div class="description m-0" > 
                         <h4 class="info-title">Perfil</h4>
                         <p class="description text-justify" >
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, labore illum. Odio, inventore voluptatum corporis quidem harum ex natus reprehenderit ea quam maxime nesciunt facere nobis a numquam, molestiae modi?
+                            {{grupoSeleccionado.perfil_profesional}}
                         </p>
                     </div>
                 </div>
@@ -32,15 +32,10 @@
                         </div>
                         <div class="description">
                             <h4 class="info-title">Áreas De Práctica</h4>
-                            <p class="description">
-                                Área 1 x x x x x x x x x x x x x x x a
+                            <p class="description" *ngFor="let area of arregloGruposAreas">
+                               {{area.id_areas_de_practica.nombre}}
                             </p>
-                            <p class="description">
-                                Área 2
-                            </p>
-                            <p class="description">
-                                Área 3
-                            </p>
+                            
                         </div>
                     </div>
                     
