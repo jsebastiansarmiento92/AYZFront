@@ -4,14 +4,16 @@ export class AreasPractica {
     public nombre: string;
     public objetivo: string;
     public definicion: string;
+    public descripcion: string;
     public imagen: string;
 
-    constructor(id:number, nom: string, obj:string, def:string, img: string){
+    constructor(id:number, nom: string, obj:string, def:string, img: string, des: string){
         this.id_areas_de_practica=id;
         this.nombre=nom;
         this.objetivo=obj;
         this.definicion=def;
         this.imagen =img;
+        this.descripcion = des;
     }
 
 }
