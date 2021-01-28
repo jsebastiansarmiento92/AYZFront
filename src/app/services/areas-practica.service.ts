@@ -10,9 +10,7 @@ export class AreasPracticaService {
 
   private url: string = Dominios.dominioAreasPracticas;
   
-  constructor( private http: HttpClient) { 
-
-  }
+  constructor( private http: HttpClient) { }
 
   getAreasPractica(){
     return this.http.get<AreasPractica[]>(this.url);
