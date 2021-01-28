@@ -2370,8 +2370,8 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5); }
 
 .btn-outline-info {
-  color: #D9CC1A;
-  background-color: transparent;
+  color: #fff;
+  background-color: #F2E205;
   background-image: none;
   border-color: #D9CC1A; }
   .btn-outline-info:hover {
@@ -2382,7 +2382,7 @@ fieldset:disabled a.btn {
     box-shadow: 0 0 0 0.2rem rgba(0, 188, 212, 0.5); }
   .btn-outline-info.disabled, .btn-outline-info:disabled {
     color: #D9CC1A;
-    background-color: transparent; }
+    background-color: #F2E205; }
   .btn-outline-info:not(:disabled):not(.disabled):active, .btn-outline-info:not(:disabled):not(.disabled).active,
   .show > .btn-outline-info.dropdown-toggle {
     color: #ffffff;
@@ -2403,7 +2403,7 @@ fieldset:disabled a.btn {
     border-color: #ffeb3b; }
   .btn-outline-warning:focus, .btn-outline-warning.focus {
     box-shadow: 0 0 0 0.2rem rgba(255, 235, 59, 0.5); }
-  .btn-outline-warning.disabled, .btn-outline-warning:disabled {
+  .btn-outline-warning.disabled, .btn-outline-warning:disabled { 
     color: #ffeb3b;
     background-color: transparent; }
   .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
@@ -7539,7 +7539,7 @@ button:focus {
     .btn.btn-outline-secondary.btn-link {
       background-color: transparent; }
   .btn.btn-outline-info {
-    color: #D9CC1A;
+    color: #D9CC1A !important;
     background-color: transparent;
     border-color: #D9CC1A; }
     .btn.btn-outline-info:hover {
@@ -7547,8 +7547,8 @@ button:focus {
       background-color: rgba(153, 153, 153, 0.2);
       border-color: #D9CC1A; }
     .btn.btn-outline-info:focus, .btn.btn-outline-info.focus, .btn.btn-outline-info:hover {
-      color: #D9CC1A;
-      background-color: rgba(153, 153, 153, 0.2);
+      color: #fff !important;
+      background-color: #F2E205;
       border-color: #D9CC1A; }
     .btn.btn-outline-info:active, .btn.btn-outline-info.active,
     .open > .btn.btn-outline-info.dropdown-toggle,
@@ -10602,7 +10602,7 @@ footer {
   padding: 0.625rem 0;
   margin-bottom: 20px;
   color: #555;
-  background-color: #fff !important;
+  background-color: #fff ;
   box-shadow: 0 4px 18px 0px rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15); }
   .navbar .dropdown-item:hover,
   .navbar .dropdown-item:focus {

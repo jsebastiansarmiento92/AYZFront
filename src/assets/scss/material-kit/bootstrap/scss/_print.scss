@@ -99,7 +99,9 @@
     // Bootstrap components
     .navbar {
       display: none;
+      background-color: transparent;
     }
+    
     .badge {
       border: $border-width solid #000;
     }
