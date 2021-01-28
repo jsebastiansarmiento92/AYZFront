@@ -18,6 +18,8 @@ import { AreaPractica4Component } from './componentes/area-practica4/area-practi
 import { AreaPractica5Component } from './componentes/area-practica5/area-practica5/area-practica5.component';
 import { AreaPractica6Component } from './componentes/area-practica6/area-practica6/area-practica6.component';
 import { TecnicosComponent } from './componentes/tecnicos/tecnicos/tecnicos.component';
+import { FooterNocheComponent } from './componentes/footerNoche/footer-noche/footer-noche.component';
+import { HeadNocheComponent } from './componentes/headNoche/head-noche/head-noche.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { TecnicosComponent } from './componentes/tecnicos/tecnicos/tecnicos.comp
     AreaPractica4Component,
     AreaPractica5Component,
     AreaPractica6Component,
-    TecnicosComponent
+    TecnicosComponent,
+    FooterNocheComponent,
+    HeadNocheComponent
   ],
   imports: [
     BrowserModule,

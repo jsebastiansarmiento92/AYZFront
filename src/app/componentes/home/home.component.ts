@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+const templateDia='./home.component.html';
+const templateNoche='./homeNoche.component.html';
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+ 
   constructor() { }
 
   ngOnInit(): void {
+    if(true){
+      //this.templateFin=templateNoche;
+    }
   }
 
 }

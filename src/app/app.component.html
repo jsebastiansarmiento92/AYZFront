@@ -1,5 +1,12 @@
-<app-head></app-head>
+<app-head *ngIf="false; else elseHeadNoche"></app-head>
+<ng-template #elseHeadNoche>
+    <app-head-noche></app-head-noche>
+</ng-template>
 <div>
     <router-outlet></router-outlet>
 </div>
-<app-footer></app-footer>
+
+<app-footer *ngIf="false; else eslseFooterNoche"></app-footer>
+<ng-template #eslseFooterNoche>
+    <app-footer-noche></app-footer-noche>
+</ng-template>
