@@ -4,7 +4,7 @@ import { GrupoTrabajoModel } from "./gruposTrabajoModel";
 export class GrupoAreasModel {
     
     public id : number;
-    public id_areas_de_practica : AreasPractica = new AreasPractica(null,"","","","");
+    public id_areas_de_practica : AreasPractica = new AreasPractica(null,"","","","","");
     public id_grupo_de_trabajo : GrupoTrabajoModel = new GrupoTrabajoModel (null,"","","","","");
     
     constructor(id: number, idAreas: AreasPractica, idGrupo: GrupoTrabajoModel) {

@@ -15,7 +15,7 @@ export class AreaPracticaComponent implements OnInit {
   public areaActual: AreasPractica;
   
   constructor( private areasPracticaService: AreasPracticaService, private router: Router, private route: ActivatedRoute) { 
-    this.areaActual = new AreasPractica (null,"","","","");
+    this.areaActual = new AreasPractica (null,"","","","","");
   }
 
   ngOnInit(): void {
