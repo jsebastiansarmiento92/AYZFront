@@ -13362,13 +13362,13 @@ thead.thead-inverse th,
   .card .card-header-rose, .card.bg-rose,
   .card.card-rotate.bg-rose .front,
   .card.card-rotate.bg-rose .back {
-    background: linear-gradient(60deg, #4b40ec, #2318c2); }
+    background: linear-gradient(60deg, #fbff00, #bfc21e); }
   .card .card-header-primary {
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(156, 39, 176, 0.6); }
   .card .card-header-danger {
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(244, 67, 54, 0.6); }
   .card .card-header-rose {
-    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(50, 30, 99, 0.6); }
+    box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(98, 99, 30, 0.6); }
   .card .card-header-warning {
     box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.2), 0 13px 24px -11px rgba(255, 152, 0, 0.6); }
   .card .card-header-info {
