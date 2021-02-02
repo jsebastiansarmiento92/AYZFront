@@ -17,11 +17,18 @@ export class HomeComponent implements OnInit {
   public templateActual: boolean;
   public arregloGruposTrabajo: GrupoTrabajoModel[] = [];
   public areaSelecionada: AreasPractica;
+  public hoy = new Date();
   public grupoSelecionado: GrupoTrabajoModel;
   constructor(private grupoTrabajoSevice: GruposTrabajoService, private areasPracticaService: AreasPracticaService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.templateActual = true;
+    var fecha = this.hoy.getHours();
+    if (fecha>=5 && fecha<19) {
+      this.templateActual = true;
+    } else {
+      this.templateActual = false;
+    }
+    
     this.inicilizarAreasPractica();
     this.inicializarGrupoTrabajo();
   }

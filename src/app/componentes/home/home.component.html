@@ -1,6 +1,6 @@
 <body id="inicio" class="index-page sidebar-collapse" *ngIf="templateActual; else templateNoche">
   <div class="page-header clear-filter" data-parallax="true"
-    style="background-image: url('./assets/img/city-profile.jpg');">
+    style="background-image: url('./assets/img/chicago.jpg');">
     <div style="margin: auto;">
       <img src="assets/img/logo/logo-abogados-m.png" style="height: 400px; " alt="">
     </div>
@@ -73,7 +73,7 @@
                 <div class="rotating-card-container">
                   <div class="card card-rotate card-background">
                     <div class="front front-background"
-                      style="background-image: url('./assets/img/examples/card-blog5.jpg');">
+                      style="background-image: url({{listAreasPractica.imagen}});">
                       <div class="card-body">
                         <h6 class="card-category">area de trabajo</h6>
                         <a [routerLink]="['/areaPractica/', listAreasPractica.idArea]">
@@ -82,7 +82,7 @@
                       </div>
                     </div>
                     <div class="back back-background"
-                      style="background-image: url('./assets/img/examples/card-blog5.jpg');">
+                      style="background-image: url({{listAreasPractica.imagen}});">
                       <div class="card-body">
                         <h5 class="card-title">
                           Detalle
@@ -357,9 +357,9 @@
 <ng-template #templateNoche>
   <body id="inicio" class="index-page sidebar-collapse">
     <div class="page-header clear-filter" data-parallax="true"
-      style="background-image: url('./assets/img/city-profile.jpg');">
+      style="background-image: url('./assets/img/citynoche.jpg');">
       <div style="margin: auto;">
-        <img src="assets/img/logo/logo icono png.png" style="background: none; height: 400px; margin-bottom: 43px;" alt="">
+        <img src="assets/img/logo/logo-abogados-m.png" style="height: 400px; " alt="">
       </div>
     </div>
     <div class="main main-raised">
@@ -430,7 +430,7 @@
                   <div class="rotating-card-container">
                     <div class="card card-rotate card-background">
                       <div class="front front-background"
-                        style="background-image: url('./assets/img/examples/card-blog5.jpg');">
+                        style="background-image: url({{listAreasPractica.imagen}});">
                         <div class="card-body">
                           <h6 class="card-category">area de trabajo</h6>
                           <a [routerLink]="['/areaPractica/', listAreasPractica.idArea]">
@@ -439,7 +439,7 @@
                         </div>
                       </div>
                       <div class="back back-background"
-                        style="background-image: url('./assets/img/examples/card-blog5.jpg');">
+                        style="background-image: url({{listAreasPractica.imagen}});">
                         <div class="card-body">
                           <h5 class="card-title">
                             Detalle
