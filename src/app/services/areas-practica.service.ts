@@ -15,5 +15,5 @@ export class AreasPracticaService {
 
   getAreasPractica(){
     return this.firestore.collection('id_areas_practica').snapshotChanges();
-  } 
+  }
 }
