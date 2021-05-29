@@ -20,7 +20,9 @@ import { HeadNocheComponent } from './componentes/headNoche/head-noche/head-noch
 
 import { AreasPracticaService } from './services/areas-practica.service'
 import { from } from 'rxjs';
- 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { from } from 'rxjs';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     AreasPracticaService

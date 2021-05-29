@@ -23,7 +23,7 @@ export class AreaPracticaComponent implements OnInit {
       res => {
         console.log(res);
         console.log("caragando areas de trabajo")
-        this.arregloAreasPractica = res;
+        //this.arregloAreasPractica = res;
         this.route.paramMap.subscribe((parametro: ParamMap)=>{
           const codigo = parseFloat(parametro.get('idarea'));
           console.log(codigo);

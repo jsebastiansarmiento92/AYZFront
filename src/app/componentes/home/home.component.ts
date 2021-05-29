@@ -19,7 +19,10 @@ export class HomeComponent implements OnInit {
   public areaSelecionada: AreasPractica;
   public hoy = new Date();
   public grupoSelecionado: GrupoTrabajoModel;
-  constructor(private grupoTrabajoSevice: GruposTrabajoService, private areasPracticaService: AreasPracticaService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private grupoTrabajoSevice: GruposTrabajoService,
+    private areasPracticaService: AreasPracticaService,
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     var fecha = this.hoy.getHours();
@@ -51,17 +54,20 @@ export class HomeComponent implements OnInit {
   /**
    * inicilizarAreasPractica
    */
+
+
   public inicilizarAreasPractica() {
-    this.areasPracticaService.getAreasPractica().subscribe(
-      res => {
-        console.log(res);
-        this.arregloAreasPractica = res;
-      },
-      err =>{
-        console.log("si hay error");
-        console.error(err);
-      }
-    );
+    let areasPractica = [];
+
+    this.areasPracticaService.getAreasPractica().subscribe((data) => {
+      data.forEach(element => {
+        areasPractica.push({
+          id: element.payload.doc.id,
+          data: element.payload.doc.data()
+        });
+      });
+      console.log("las areas de practica son ",areasPractica);
+    });
   }
 
   /**
