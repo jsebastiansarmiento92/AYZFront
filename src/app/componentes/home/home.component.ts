@@ -43,7 +43,17 @@ export class HomeComponent implements OnInit {
     this.grupoTrabajoSevice.getGruposTrabajo().subscribe(
       res =>{
         console.log(res);
-        this.arregloGruposTrabajo = res;
+        let areasGrupo = [];
+        res.forEach(element => {
+          areasGrupo.push({id_grupo_de_trabajo: element.payload.doc.id, 
+            nombre_area: element.payload.doc.get("nombre_area"),
+            especialidad: element.payload.doc.get("especialidad"),
+            descripcion: element.payload.doc.get("descripcion"),
+            imagen: element.payload.doc.get("imagen"),
+            perfil_profesional: element.payload.doc.get("perfil_profesional")
+          });
+        });
+        this.arregloGruposTrabajo = areasGrupo
       },err =>{
         console.log("si hay error");
         console.error(err);
@@ -54,19 +64,20 @@ export class HomeComponent implements OnInit {
   /**
    * inicilizarAreasPractica
    */
-
-
   public inicilizarAreasPractica() {
     let areasPractica = [];
-
     this.areasPracticaService.getAreasPractica().subscribe((data) => {
       data.forEach(element => {
-        areasPractica.push({
-          id: element.payload.doc.id,
-          data: element.payload.doc.data()
+        areasPractica.push({id_areas_de_practica: element.payload.doc.id, 
+          nombre: element.payload.doc.get("nombre"),
+          definicion: element.payload.doc.get("definición"),
+          descripcion: element.payload.doc.get("descripcion"),
+          imagen: element.payload.doc.get("imagen"),
+          objetivo: element.payload.doc.get("objetivo")
         });
       });
-      console.log("las areas de practica son ",areasPractica);
+      this.arregloAreasPractica = areasPractica;
+      console.log("las areas de practica son ", this.arregloAreasPractica);
     });
   }
 

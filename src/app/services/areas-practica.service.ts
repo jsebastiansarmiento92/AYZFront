@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as Dominios  from './dominios';
-import { AreasPractica } from '../models/areasPractica'
+import { AreasPractica } from '../models/areasPractica';
+
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 @Injectable({
   providedIn: 'root'

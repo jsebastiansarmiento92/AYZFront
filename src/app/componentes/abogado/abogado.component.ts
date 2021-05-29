@@ -30,16 +30,18 @@ export class AbogadoComponent implements OnInit {
    * saberAreasPracticas
    */
   public saberAreasPracticas() {
-    this.grupoAreasService.getAbogados().subscribe(res =>{
-      console.log(res.nombre_area);
-      
-    });
-    
-    
     this.grupoAreasService.getGrupoAreas().subscribe(res =>{
       console.log("cargando grupos y areas");
       console.log(res);      
-      this.arregloGruposAreas = res.filter((element) => element.id_grupo_de_trabajo.id_grupo_de_trabajo == 1);
+      let areasGrupo = [];
+        res.forEach(element => {
+          areasGrupo.push({id: element.payload.doc.id,
+            id_grupo_de_practica: element.payload.doc.get("id_grupo_de_practica"),
+            id_areas_de_practica: element.payload.doc.get("id_areas_de_practica")
+          });
+        });
+      this.arregloGruposAreas = areasGrupo.filter((element) => 
+      element.id_grupo_de_trabajo.id_grupo_de_trabajo == 1);
       console.log("despues del filtro");
       console.log(this.arregloGruposAreas);
     },err =>{
@@ -56,7 +58,17 @@ export class AbogadoComponent implements OnInit {
       res => {
         console.log(res);
         console.log("cargo grupos");
-        this.arreglogruposTrabajos = res;
+        let areasGrupo = [];
+        res.forEach(element => {
+          areasGrupo.push({id_grupo_de_trabajo: element.payload.doc.id, 
+            nombre_area: element.payload.doc.get("nombre_area"),
+            especialidad: element.payload.doc.get("especialidad"),
+            descripcion: element.payload.doc.get("descripcion"),
+            imagen: element.payload.doc.get("imagen"),
+            perfil_profesional: element.payload.doc.get("perfil_profesional")
+          });
+        });
+        this.arreglogruposTrabajos = areasGrupo
         this.route.paramMap.subscribe((parametro: ParamMap)=>{
           const codigo = parseFloat(parametro.get('idgrupo'));
           this.grupoSeleccionado = this.arreglogruposTrabajos.find((grupo)=> grupo.id_grupo_de_trabajo == codigo);

@@ -23,7 +23,17 @@ export class AreaPracticaComponent implements OnInit {
       res => {
         console.log(res);
         console.log("caragando areas de trabajo")
-        //this.arregloAreasPractica = res;
+        let areasPractica = [];
+        res.forEach(element => {
+          areasPractica.push({id_areas_de_practica: element.payload.doc.id, 
+            nombre: element.payload.doc.get("nombre"),
+            definicion: element.payload.doc.get("definición"),
+            descripcion: element.payload.doc.get("descripcion"),
+            imagen: element.payload.doc.get("imagen"),
+            objetivo: element.payload.doc.get("objetivo")
+          });
+        });
+        this.arregloAreasPractica = areasPractica;
         this.route.paramMap.subscribe((parametro: ParamMap)=>{
           const codigo = parseFloat(parametro.get('idarea'));
           console.log(codigo);
